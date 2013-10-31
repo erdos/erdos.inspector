@@ -1,12 +1,12 @@
 # erdos.inspector
 
-A better clojure.inspector
+A clojure.inspector clone with improved feature set.
 
 ## Features
 
-- Supports ininite lazy sequences
-- Handles arrays and some java types
+- Supports infinite lazy sequences
 - Displays atoms, refs, agents, vars. Shows change in real time
+- Handles arrays and some java collection types
 - Fancy graphics
 
 ## Screenshot
