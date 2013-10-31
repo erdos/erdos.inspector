@@ -9,6 +9,10 @@ A better clojure.inspector
 - Displays atoms, refs, agents, vars. Shows change in real time
 - Fancy graphics
 
+## Screenshot
+
+![program pop up window](https://raw.github.com/erdos/erdos.inspector/master/doc/screenshot.png)
+
 ## Usage
 
 ```clojure
