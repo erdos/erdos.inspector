@@ -3,6 +3,8 @@
    (java.awt.event MouseAdapter)
    (javax.swing JScrollPane JFrame)))
 
+;; TODO implement ns listing also.
+
 
                                         ; CLOJURE
 (defn toggle-contains
@@ -19,7 +21,6 @@
      (->> name str
           clojure.java.io/resource
           javax.swing.ImageIcon.))))
-
 
 (defn- graphics-smooth
   [g]
@@ -47,8 +48,8 @@
 
                                         ; MODEL
 
-(def obj-coll-children nil)
-(defmulti obj-coll-children class)
+(def ^:private obj-coll-children nil)
+(defmulti ^:private obj-coll-children class)
 
 (defmethod obj-coll-children clojure.lang.IRef [x] [@x])
 
@@ -64,23 +65,20 @@
 
 
 (prefer-method obj-coll-children clojure.lang.IPending clojure.lang.ISeq)
-
 (prefer-method obj-coll-children clojure.lang.IPending ::seq)
 
 (defmethod obj-coll-children clojure.lang.PersistentList$EmptyList [_] [])
-
-
-(derive clojure.lang.ASeq ::seq)
-                                        ; (derive clojure.lang.LazySeq ::seq) - ipending here.
-(derive clojure.lang.Seqable ::seq)
-(derive java.lang.Iterable ::seq)
-(derive java.util.Map ::seq)
-
 
 (defmethod obj-coll-children java.util.Map$Entry [e]
   [(.getKey e) (.getValue e)])
 
 (prefer-method obj-coll-children java.util.Map$Entry ::seq)
+
+(derive clojure.lang.ASeq ::seq)
+(derive clojure.lang.Seqable ::seq)
+(derive java.lang.Iterable ::seq)
+(derive java.util.Map ::seq)
+(derive clojure.lang.IObj ::clj)
 
 (doseq [f [object-array int-array float-array long-array
            double-array byte-array char-array short-array boolean-array]]
@@ -88,9 +86,6 @@
 
 (defmethod obj-coll-children ::seq [m] (seq m))
 
-(derive clojure.lang.IObj ::clj)
-
-;; TODO implement ns listing also.
 (defn- obj-state?
   "Returns true if x contains state that may change over time."
   [x]
@@ -101,14 +96,11 @@
 
 (defn- obj-state-children
   "Returns coll of thildren objs of x iff obj-state? is true."
-  [x]
-  [@x])
-
+  [x] [@x])
 
 (defn- obj-has-children? [x]
   (or (not (nil? (get-method obj-coll-children (class x))))
       (obj-state? x)))
-
 
 (defn- obj-children
   [x]
@@ -334,6 +326,7 @@
   (def test-agent (agent 1))
   (send test-agent inc)
   (inspect [nil
+            'a-symbol
             {:a 1}
             #{:a :b :c}
             (iterate inc 0)

@@ -5,8 +5,8 @@ A better clojure.inspector
 ## Features
 
 - Supports ininite lazy sequences
-- Handles arrays and some java types.
-- Displays atoms, refs, agents, vars. Shows change in real time.
+- Handles arrays and some java types
+- Displays atoms, refs, agents, vars. Shows change in real time
 - Fancy graphics
 
 ## Usage
@@ -15,7 +15,7 @@ A better clojure.inspector
 (use 'erdos.clojure)
 ```
 
-Testing basic types.
+Testing basic types
 ```clojure
 (inspect [nil :a-keyword 'a-symbool])
 (inspect [{:a 1 :b 2 :c 2}
@@ -24,7 +24,7 @@ Testing basic types.
 (inspect (int-array [1 2 3 4 5]))
 ```
 
-Some Java collections.
+Some Java collections
 ```clojure
 (inspect (new java.util.HashMap {:a 1 :b 2}))
 (inspect (new java.util.ArrayList [1 2 3 4]))
@@ -39,6 +39,12 @@ An infinite lazy seq
 (inspect (map * (range) (range)))
 ```
 
+Change of the atom is shown real time.
+```clojure
+(def a (atom 1))
+(inspect ["speed:" a])
+(swap! a inc) ;; execute this several times in a row.
+```
 
 ## License
 
