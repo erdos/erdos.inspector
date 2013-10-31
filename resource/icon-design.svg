@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   id="svg3022"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="icons2.svg">
+  <defs
+     id="defs3024">
+    <linearGradient
+       id="linearGradient3850"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#1b1b1b;stop-opacity:1;"
+         offset="0"
+         id="stop3852" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="9"
+     inkscape:cx="116.39017"
+     inkscape:cy="66.555546"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     showguides="false"
+     inkscape:window-width="1579"
+     inkscape:window-height="1016"
+     inkscape:window-x="185"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     showborder="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3030"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3027">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <g
+       id="clj-set"
+       inkscape:label="#g3860"
+       transform="matrix(1.3333333,0,0,1.3333333,-18.333332,-32)">
+      <path
+         transform="translate(8,8)"
+         d="M 29,16 C 29,22.627417 23.627417,28 17,28 10.372583,28 5,22.627417 5,16 5,9.372583 10.372583,4 17,4 23.627417,4 29,9.372583 29,16 z"
+         sodipodi:ry="12"
+         sodipodi:rx="12"
+         sodipodi:cy="16"
+         sodipodi:cx="17"
+         id="path3032"
+         style="color:#000000;fill:#336699;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3856"
+         y="31"
+         x="16.1"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt"
+           y="31"
+           x="16.1"
+           id="tspan3858"
+           sodipodi:role="line">#{</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.3333333,0,0,1.3333333,16.666668,-32)"
+       inkscape:label="#g3860"
+       id="clj-map">
+      <path
+         sodipodi:type="arc"
+         style="color:#000000;fill:#336699;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="path3867"
+         sodipodi:cx="17"
+         sodipodi:cy="16"
+         sodipodi:rx="12"
+         sodipodi:ry="12"
+         d="M 29,16 C 29,22.627417 23.627417,28 17,28 10.372583,28 5,22.627417 5,16 5,9.372583 10.372583,4 17,4 23.627417,4 29,9.372583 29,16 z"
+         transform="translate(8,8)" />
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         x="17.799999"
+         y="31"
+         id="text3869"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3871"
+           x="17.799999"
+           y="31"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt">{}</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.3333333,0,0,1.3333333,-18.333332,3.0000004)"
+       inkscape:label="#g3860"
+       id="clj-vector">
+      <path
+         sodipodi:type="arc"
+         style="color:#000000;fill:#6699cc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="path3875"
+         sodipodi:cx="17"
+         sodipodi:cy="16"
+         sodipodi:rx="12"
+         sodipodi:ry="12"
+         d="M 29,16 C 29,22.627417 23.627417,28 17,28 10.372583,28 5,22.627417 5,16 5,9.372583 10.372583,4 17,4 23.627417,4 29,9.372583 29,16 z"
+         transform="translate(8,8)" />
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma"
+         x="17.900999"
+         y="31"
+         id="text3877"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3879"
+           x="17.900999"
+           y="31"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt">[]</tspan></text>
+    </g>
+    <g
+       id="clj-list"
+       inkscape:label="#g3860"
+       transform="matrix(1.3333333,0,0,1.3333333,16.666668,3.0000004)">
+      <path
+         transform="translate(8,8)"
+         d="M 29,16 C 29,22.627417 23.627417,28 17,28 10.372583,28 5,22.627417 5,16 5,9.372583 10.372583,4 17,4 23.627417,4 29,9.372583 29,16 z"
+         sodipodi:ry="12"
+         sodipodi:rx="12"
+         sodipodi:cy="16"
+         sodipodi:cx="17"
+         id="path3883"
+         style="color:#000000;fill:#6699cc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3885"
+         y="31"
+         x="20.000999"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt"
+           y="31"
+           x="20.000999"
+           id="tspan3887"
+           sodipodi:role="line">()</tspan></text>
+    </g>
+    <g
+       transform="matrix(1.3333333,0,0,1.3333333,51.666667,3.0000004)"
+       inkscape:label="#g3860"
+       id="g3860">
+      <path
+         sodipodi:type="arc"
+         style="color:#000000;fill:#d9bb7a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="path3893"
+         sodipodi:cx="17"
+         sodipodi:cy="16"
+         sodipodi:rx="12"
+         sodipodi:ry="12"
+         d="M 29,16 C 29,22.627417 23.627417,28 17,28 10.372583,28 5,22.627417 5,16 5,9.372583 10.372583,4 17,4 23.627417,4 29,9.372583 29,16 z"
+         transform="translate(8,8)" />
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         x="16.801001"
+         y="31"
+         id="text3895"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3897"
+           x="16.801001"
+           y="31"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt">fn</tspan></text>
+    </g>
+    <g
+       id="clj-iref"
+       inkscape:label="#g3860"
+       transform="matrix(1.3333333,0,0,1.3333333,51.666667,-32)">
+      <path
+         transform="translate(8,8)"
+         d="M 29,16 C 29,22.627417 23.627417,28 17,28 10.372583,28 5,22.627417 5,16 5,9.372583 10.372583,4 17,4 23.627417,4 29,9.372583 29,16 z"
+         sodipodi:ry="12"
+         sodipodi:rx="12"
+         sodipodi:cy="16"
+         sodipodi:cx="17"
+         id="path3901"
+         style="color:#000000;fill:#f44800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3903"
+         y="31"
+         x="16.9"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt"
+           y="31"
+           x="16.9"
+           id="tspan3905"
+           sodipodi:role="line">@</tspan></text>
+    </g>
+    <g
+       transform="translate(7.2312941,-41.025624)"
+       inkscape:label="#g3860"
+       id="g3907">
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         x="16.9"
+         y="31"
+         id="text3911"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3913"
+           x="16.9"
+           y="31"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         x="30.640503"
+         y="-14.588403"
+         id="text3915"
+         sodipodi:linespacing="125%"
+         transform="translate(-7.2312941,41.025624)"><tspan
+           sodipodi:role="line"
+           id="tspan3917"
+           x="30.640503"
+           y="-14.588403" /></text>
+    </g>
+    <g
+       transform="matrix(1.3333333,0,0,1.3333333,-18.333332,-67)"
+       inkscape:label="#g3860"
+       id="clj-fn"
+       inkscape:export-xdpi="120"
+       inkscape:export-ydpi="120">
+      <path
+         sodipodi:type="arc"
+         style="color:#000000;fill:#d9bb7a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="path3921"
+         sodipodi:cx="17"
+         sodipodi:cy="16"
+         sodipodi:rx="12"
+         sodipodi:ry="12"
+         d="M 29,16 C 29,22.627417 23.627417,28 17,28 10.372583,28 5,22.627417 5,16 5,9.372583 10.372583,4 17,4 23.627417,4 29,9.372583 29,16 z"
+         transform="translate(8,8)" />
+      <g
+         id="g3927">
+        <text
+           sodipodi:linespacing="125%"
+           id="text3923"
+           y="30.400347"
+           x="19.399561"
+           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt"
+             y="30.400347"
+             x="19.399561"
+             id="tspan3925"
+             sodipodi:role="line">λ</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="matrix(1.3333333,0,0,1.3333333,51.666668,-67)"
+       inkscape:label="#g3860"
+       id="java-array">
+      <rect
+         style="color:#000000;fill:#0197fd;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect4023"
+         width="32"
+         height="32"
+         x="69"
+         y="-51"
+         transform="matrix(0.75000002,0,0,0.75000002,-38.750002,50.250001)"
+         ry="5.0000005" />
+      <text
+         xml:space="preserve"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         x="17.725"
+         y="31"
+         id="text4019"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4021"
+           x="17.725"
+           y="31"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt">[L</tspan></text>
+    </g>
+    <g
+       id="java-obj"
+       inkscape:label="#g3860"
+       transform="matrix(1.3333333,0,0,1.3333333,16.666668,-67)">
+      <rect
+         ry="5.0000005"
+         transform="matrix(0.75000002,0,0,0.75000002,-38.750002,50.250001)"
+         y="-51"
+         x="69"
+         height="32"
+         width="32"
+         id="rect4027"
+         style="color:#000000;fill:#0197fd;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4031"
+         y="31"
+         x="16.599998"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Lucida Medium"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#eeeeee;font-family:Marker Felt;-inkscape-font-specification:Marker Felt"
+           y="31"
+           x="16.599998"
+           id="tspan4033"
+           sodipodi:role="line">#&lt;</tspan></text>
+    </g>
+    <g
+       id="g3035"
+       inkscape:label="#g3860"
+       transform="matrix(1.3333333,0,0,1.3333333,86.666668,-67)" />
+  </g>
+</svg>
