@@ -361,6 +361,9 @@
   (inspect ["Sieve of Eratosthenes"
             (sieve (iterate inc 2))])
   ;; TODO: java bean objects! table grapgics??
+
+  (swap! a inc) ;; execute this several times in a row.
+
   )
 
 :okidoki
