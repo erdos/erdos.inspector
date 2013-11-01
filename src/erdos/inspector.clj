@@ -5,7 +5,6 @@
    (java.awt.event MouseAdapter)
    (javax.swing JScrollPane JFrame)))
 
-;; TODO implement ns listing also.
 
                                         ; CLOJURE
 (defn toggle-contains
@@ -14,6 +13,12 @@
     (disj coll x) (conj coll x)))
 
                                         ; SWING
+
+(defn- repaint!
+  [component]
+  (doto (.getParent component)
+    .revalidate
+    .repaint))
 
 (def icon!
   (memoize
@@ -63,7 +68,6 @@
 (defmethod obj-coll-children clojure.lang.ISeq [x]
   (cons (first x) (lazy-seq (obj-coll-children (rest x)))))
 
-
 (prefer-method obj-coll-children clojure.lang.IPending clojure.lang.ISeq)
 (prefer-method obj-coll-children clojure.lang.IPending ::seq)
 
@@ -71,6 +75,9 @@
 
 (defmethod obj-coll-children java.util.Map$Entry [e]
   [(.getKey e) (.getValue e)])
+
+(defmethod obj-coll-children java.lang.Throwable [e]
+  (flatten (seq (bean e))))
 
 (prefer-method obj-coll-children java.util.Map$Entry ::seq)
 
@@ -100,13 +107,18 @@
 
 (defn- obj-has-children? [x]
   (or (not (nil? (get-method obj-coll-children (class x))))
-      (obj-state? x)))
+      (obj-state? x)
+      (and (not (nil? x)) (-> x .getClass .isArray))))
 
 (defn- obj-children
   [x]
-  (if-let [m (get-method obj-coll-children (class x))]
-    (m x)
-    (obj-state-children x)))
+  (or
+   (if-let [m (get-method obj-coll-children (class x))]
+     (m x))
+   (if (instance? clojure.lang.IRef x)
+     (obj-state-children x))
+   (if (-> x .getClass .isArray)
+     (seq x))))
 
 (def ^:private paint-x1 48)
 (def ^:private paint-height 42)
@@ -232,12 +244,6 @@
   (if-not (seq path) root
           (recur (nth (seq root) (first path)) (next path))))
 
-(defn- repaint!
-  [component]
-  (doto (.getParent component)
-    .revalidate
-    .repaint))
-
 (defn tree-component
   [data]
   "Creates a java swing JComponent instance to show structure of data object.
@@ -327,8 +333,14 @@
     (.setVisible true)))
 
 (comment
+  ;; support for exceptions
+  (inspect  (RuntimeException. "asd"))
+
+  ;; support for pojos
+  (inspect (bean (RuntimeException. "asd")))
 
   (def test-agent (agent 1))
+
   (send test-agent inc)
   (inspect [nil
             'a-symbol
@@ -366,8 +378,9 @@
   (inspect ["Sieve of Eratosthenes"
             (sieve (iterate inc 2))])
   ;; TODO: java bean objects! table grapgics??
+  ;; TODO implement ns listing also.
 
   (swap! a inc) ;; execute this several times in a row.
-  )
+  comment)
 
 :okidoki
