@@ -6,7 +6,7 @@ A clojure.inspector clone with improved feature set.
 
 - Supports infinite lazy sequences
 - Displays atoms, refs, agents, vars. Shows change in real time
-- Handles arrays and some java collection types
+- Handles arrays, exceptions and some java collection types
 - Fancy graphics
 
 ## Screenshot
@@ -43,11 +43,16 @@ An infinite lazy seq
 (inspect (map * (range) (range)))
 ```
 
-Change of the atom is shown real time.
+Change of the atom is shown real time
 ```clojure
 (def a (atom 1))
 (inspect ["speed:" a])
 (swap! a inc) ;; execute this several times in a row.
+```
+
+You can also display information on exceptions
+```clojure
+(inspect (new java.lang.RuntimeException. "catch this"))
 ```
 
 ## License
