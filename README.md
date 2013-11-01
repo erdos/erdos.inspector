@@ -11,7 +11,9 @@ A clojure.inspector clone with improved feature set.
 
 ## Screenshot
 
-![program pop up window](https://raw.github.com/erdos/erdos.inspector/master/doc/screenshot.png)
+<p align="center">
+          <img src="https://raw.github.com/erdos/erdos.inspector/master/doc/screenshot.png"/>
+</p>
 
 ## Usage
 
