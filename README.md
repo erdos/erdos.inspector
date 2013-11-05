@@ -18,7 +18,7 @@ A clojure.inspector clone with improved feature set.
 ## Usage
 
 ```clojure
-(use 'erdos.clojure)
+(use 'erdos.inspector)
 ```
 
 Testing basic types
