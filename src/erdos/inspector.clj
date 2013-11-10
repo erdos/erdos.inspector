@@ -77,7 +77,12 @@
   [(.getKey e) (.getValue e)])
 
 (defmethod obj-coll-children java.lang.Throwable [e]
-  (flatten (seq (bean e))))
+  (-> e bean seq flatten))
+
+(comment
+  probably a bad idea
+  (defmethod obj-coll-children java.lang.Class [e]
+    (-> e bean seq flatten)))
 
 (prefer-method obj-coll-children java.util.Map$Entry ::seq)
 
@@ -93,13 +98,13 @@
 
 (defmethod obj-coll-children ::seq [m] (seq m))
 
+(defn- iref?
+  [x] (instance? clojure.lang.IRef x))
+
 (defn- obj-state?
   "Returns true if x contains state that may change over time."
   [x]
-  (or (instance? clojure.lang.IRef x)))
-
-(defn- iref?
-  [x] (instance? clojure.lang.IRef x))
+  (or (iref? x)))
 
 (defn- obj-state-children
   "Returns coll of thildren objs of x iff obj-state? is true."
@@ -115,7 +120,7 @@
   (or
    (if-let [m (get-method obj-coll-children (class x))]
      (m x))
-   (if (instance? clojure.lang.IRef x)
+   (if (iref? x)
      (obj-state-children x))
    (if (-> x .getClass .isArray)
      (seq x))))
@@ -149,10 +154,12 @@
 (defn obj-type-str
   "Returns a human-readable string representatin of the type of the object."
   [obj]
-  (if (nil? obj) ""
-      (let [s (-> obj class .getName)
-            s (if (.startsWith s "java.lang.") (subs s 10) s) ;; TODO: cond here.
-            s (if (.startsWith s "clojure.lang.") (subs s 13) s)] s)))
+  (if-not  (nil? obj)
+    (let [s (-> obj class .getName)]
+      (cond
+       (.startsWith s "java.lang.")    (subs s 10)
+       (.startsWith s "clojure.lang.") (subs s 13)
+       :else s)) ""))
 
 (defn- paint-row-leaf
   [cmp g data ind level hover]
@@ -177,6 +184,8 @@
      (= nil data)       (draw "nil" [100 100 100])
      (string? data)     (draw (str \" data \") [184 12 32])
      (keyword? data)    (draw (str data) [243 150 23])
+     (instance? java.util.regex.Pattern data)
+       (draw (str \# \" data \") [232 32 154])
      :else              (draw (str data) [3 3 3]))))
 
 (defn- row-branch-icon
@@ -187,7 +196,7 @@
    (seq? data)    (icon! "clj-list.png")
    (map? data)    (icon! "clj-map.png")
    (set? data)    (icon! "clj-set.png")
-   (instance? clojure.lang.IRef data)
+   (iref? data)
    (icon! "clj-iref.png")
    (.isArray (type data)) (icon! "java-array.png")
    :else          (icon! "java-obj.png")))
@@ -269,9 +278,9 @@
                (fn [_ _ old neu]
                  (let [listener (fn [_ _ _ _] (recalc-cache @user-open))]
                    (doseq [q (map old (remove neu (keys old)))]
-                     (remove-watch q :change))
+                     (remove-watch q ::change))
                    (doseq [q (map neu (remove old (keys neu)))]
-                     (add-watch q :change listener)))))
+                     (add-watch q ::change listener)))))
     (reset! user-open #{nil})
     (doto
         (proxy [javax.swing.JPanel] []
@@ -331,56 +340,5 @@
             (.setBorder nil)))
     (.setSize 400 600)
     (.setVisible true)))
-
-(comment
-  ;; support for exceptions
-  (inspect  (RuntimeException. "asd"))
-
-  ;; support for pojos
-  (inspect (bean (RuntimeException. "asd")))
-
-  (def test-agent (agent 1))
-
-  (send test-agent inc)
-  (inspect [nil
-            'a-symbol
-            {:a 1}
-            #{:a :b :c}
-            (iterate inc 0)
-            (range)
-            (int-array 9)
-            (object-array ["asd" :asd [1 2 3]])
-            (map * (range) (range))
-            (java.util.HashMap. {:a 1 :b 2})
-            (java.util.ArrayList. [1 2 3 4])
-            test-agent
-            '(1 2 3)
-            (atom "example text")])
-
-  (inspect [(map inc [1 2 3 4])
-            (map + [1 2 3] [1 2 3])
-            (map + (range) (range))
-            (range) (range 1 5)])
-  'VERY-SLOW (inspect (int-array 220000))
-  'OKay (inspect (doall (range 10000)))
-  (!! PENDING delay, future, promise, lazy-seq)
-  (can NOT be WATCHED - delay, future, promise - some PENDING types)
-  (can be watched - agent, atom, var, ref - all IREF types) add-watch
-  (! future - blocks, has a body executed, can be deref-ed)
-  (! promise - blocks, can be deliver-ed)
-  (! delay - like future but in one thread.)
-  (defn sieve [s]
-    (cons (first s)
-          (lazy-seq
-           (sieve
-            (filter #(not= 0 (mod % (first s)))
-                    (rest s))))))
-  (inspect ["Sieve of Eratosthenes"
-            (sieve (iterate inc 2))])
-  ;; TODO: java bean objects! table grapgics??
-  ;; TODO implement ns listing also.
-
-  (swap! a inc) ;; execute this several times in a row.
-  comment)
 
 :okidoki
