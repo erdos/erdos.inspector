@@ -79,11 +79,6 @@
 (defmethod obj-coll-children java.lang.Throwable [e]
   (-> e bean seq flatten))
 
-(comment
-  probably a bad idea
-  (defmethod obj-coll-children java.lang.Class [e]
-    (-> e bean seq flatten)))
-
 (prefer-method obj-coll-children java.util.Map$Entry ::seq)
 
 (derive clojure.lang.ASeq ::seq)
@@ -341,4 +336,4 @@
     (.setSize 400 600)
     (.setVisible true)))
 
-:okidoki
+:ok

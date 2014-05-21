@@ -59,7 +59,8 @@ You can also display information on exceptions
 
 ## License
 
-Copyright © 2013 Janos Erdos
+Copyright © 2013 Janos Erdos, student at the ELTE University, Budapest
+
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
